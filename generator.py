@@ -32,7 +32,7 @@ def generate(local=False):
             data.append(item)
 
     if not local:
-        return requests.post("http://127.0.0.1:5000/data", json=data)
+        return requests.post("http://localhost:5000/data", json=data)
 
 
 if __name__ == '__main__':
