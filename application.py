@@ -21,14 +21,14 @@ def print_exceptions(fn):
         try:
             return fn(*args, **kwargs)
         except Exception, e:
-            print ''
-            print '------'
-            print 'API: exception'
-            print e
-            print traceback.format_exc()
-            print request.url
-            print request.data
-            print '------'
+            print ('')
+            print ('------')
+            print ('API: exception')
+            print (e)
+            print (traceback.format_exc())
+            print (request.url)
+            print (request.data)
+            print ('------')
             raise
     return wrapped
 
@@ -93,10 +93,10 @@ def get_data_heatmap():
             }
     final_result = {}
     for floor in result:
-        final_result[floor] = result[floor].values()
+        final_result[floor] = list(result[floor].values())
     return jsonify({'data': final_result})
 
 
 if __name__ == '__main__':
     generator.generate(local=True)
-    app.run()
+    app.run(host='0.0.0.0')
