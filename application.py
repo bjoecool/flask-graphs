@@ -20,7 +20,7 @@ def print_exceptions(fn):
     def wrapped(*args, **kwargs):
         try:
             return fn(*args, **kwargs)
-        except Exception, e:
+        except (Exception) as e:
             print ('')
             print ('------')
             print ('API: exception')
