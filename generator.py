@@ -13,7 +13,8 @@ def generate(local=False):
     ]
 
     ts_now = int(time.time())
-    ts_2015_01_01 = 1420070400
+    # ts_2015_01_01 = 1420070400
+    ts_2015_01_01 = 1546300800
     data = []
 
     for i in range(0, count):
