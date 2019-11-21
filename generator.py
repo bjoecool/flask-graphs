@@ -24,7 +24,7 @@ def generate(local=False):
                 'x': random.randint(0, 17),
                 'y': random.randint(0, 10)
             },
-            'ts': random.randint(ts_2015_01_01, ts_now)
+            'ts': random.randint(ts_2019_01_01, ts_now)
         }
         if local:
             database.put(item)
